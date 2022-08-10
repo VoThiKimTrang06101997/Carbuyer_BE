@@ -1,6 +1,8 @@
 package com.carbuyer.model;
 
 
+import java.sql.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,7 +34,7 @@ public class Order {
 	private int userId;
 	
 	@Column(name="date")
-	private String date;
+	private Date date;
 	
 	@Column(name="total")
 	private int total;
@@ -44,7 +46,7 @@ public class Order {
 		
 	}
 	
-	public Order(int id, User user, int userId, String date, int total, String status) {
+	public Order(int id, User user, int userId, Date date, int total, String status) {
 		super();
 		this.id = id;
 		this.user = user;
